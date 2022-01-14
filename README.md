@@ -7,7 +7,7 @@ This is a chatting application done for partial fulfilment of my application pro
     - Docker-compose
 
 ### High-level system architecture:
-
+[high level system architecture](https://github.com/hussamelarabi/chat-app/blob/master/system%20design.drawio.png)
 
 ### To Launch The app:
 
