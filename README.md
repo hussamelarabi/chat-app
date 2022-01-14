@@ -2,19 +2,22 @@
 
 This is a chatting application done for partial fulfilment of my application process for Instabug. This app is built using Ruby on Rails along with ElasticSearch for easy searching through messages and Sidekiq (and redis) for asynchronous handling of creation endpoints
 
-### Requirements
+### Prerequisites
     - Docker
     - Docker-compose
+
+### High-level system architecture:
+
 
 ### To Launch The app:
 
    1. Clone repository
    ```bash
-        git clone URL HERE
+        git clone https://github.com/hussamelarabi/chat-app.git
    ```
    2. Launch application 
    ```bash
-        cd ChattingSystem/Docker
+        cd chat_app/Docker
         docker-composer up
    ```
 
@@ -24,12 +27,44 @@ This is a chatting application done for partial fulfilment of my application pro
   - http://localhost:9201 -> Elasticsearch service
   - http://localhost:6380 -> Redis Server 
 
+  4. Sample Runs
 
-  4. API documentation
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+  - POST localhost:3000/applications/create_app?name=apptest
+  ```json
+     {
+        "response": "App creation request added"
+     }
+```
+STATUS RESPONSE: 202 Created
+- POST localhost:3001/applications/:token/create_chat
+```json
+     {
+        "response": "Chat creation request added"
+     }
+```
+STATUS RESPONSE: 202 Created
+
+- POST localhost:3001/applications/:token/chats/:chat_number/send_message?body=test_body
+```json
+     {
+        "response": "Message creation request added"
+     }
+```
+STATUS RESPONSE: 202 Created
+- GET localhost:3001/applications/:token/chats/:chat_number/get_messages
+```json
+{
+    "response": "ok",
+    "messages": [
+        {
+            "message_number": 1,
+            "body": "test_body",
+            "created_at": "2022-01-14T15:06:49.000Z"
+        }
+    ]
+}
+```
+STATUS RESPONSE: 200 OK
  
 
 
