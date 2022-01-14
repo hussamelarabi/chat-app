@@ -29,7 +29,7 @@ This is a chatting application done for partial fulfilment of my application pro
 
   4. Sample Runs
 
-  - POST localhost:3000/applications/create_app?name=apptest
+  - POST localhost:3001/applications/create_app?name=apptest
   ```json
      {
         "response": "App creation request added"
