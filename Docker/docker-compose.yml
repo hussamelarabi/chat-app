@@ -58,6 +58,9 @@ services:
       - "9201:9200"
       - "9301:9300"
     networks: ['stack']
+    depends_on:
+      - mysql
+      - redis
 
   mysql:
     image: mysql:5.7.22

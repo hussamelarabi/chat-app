@@ -29,7 +29,7 @@ class ApplicationsController < ApplicationController
   def find_by_token
     app = Application.find_by_token(params[:token])
     if app
-      render json: { 'response': 'OK', 'app': app.as_json(only: [:name, :token, :chats_count, :created_at]) }, status: :created
+      render json: { 'response': 'OK', 'app': app.as_json(only: [:name, :token, :chats_count, :created_at]) }, status: :ok
     else
       render json: { 'response': 'Invalid Token' }, status: :no_content
     end

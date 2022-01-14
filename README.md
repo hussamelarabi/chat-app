@@ -18,7 +18,7 @@ This is a chatting application done for partial fulfilment of my application pro
    2. Launch application 
    ```bash
         cd chat_app/Docker
-        docker-composer up
+        docker-compose up
    ```
 
   3.  Services will launch on the following ports:
@@ -65,6 +65,12 @@ STATUS RESPONSE: 202 Created
 }
 ```
 STATUS RESPONSE: 200 OK
- 
+
+### API Documentation
+
+- Application endpoints [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/19134366-c312117e-465c-4fbe-aab6-4297dd3de539?action=collection%2Ffork&collection-url=entityId%3D19134366-c312117e-465c-4fbe-aab6-4297dd3de539%26entityType%3Dcollection%26workspaceId%3Dbf66c651-a6bd-47a8-9717-dc4ed146e6a4)
 
 
+- Chat endpoints [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/19134366-77efc3a5-cfc8-4648-8774-042a8194a1f5?action=collection%2Ffork&collection-url=entityId%3D19134366-77efc3a5-cfc8-4648-8774-042a8194a1f5%26entityType%3Dcollection%26workspaceId%3Dbf66c651-a6bd-47a8-9717-dc4ed146e6a4)
+
+- Message endpoints [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/19134366-e5c94e27-63e6-476c-83cf-c6b8c09672f4?action=collection%2Ffork&collection-url=entityId%3D19134366-e5c94e27-63e6-476c-83cf-c6b8c09672f4%26entityType%3Dcollection%26workspaceId%3Dbf66c651-a6bd-47a8-9717-dc4ed146e6a4)
