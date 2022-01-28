@@ -1,0 +1,7 @@
+development: &default
+  host: 'elasticsearch'
+  port: 9200
+test:
+  <<: *default
+production:
+  <<: *default

@@ -50,10 +50,9 @@ services:
 
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.4.1
+    container_name: elasticsearch
     environment:
       - discovery.type=single-node
-#    volumes:
-#      - ../src/instapp/elastic-data:/usr/share/elasticsearch/data
     ports:
       - "9201:9200"
       - "9301:9300"
